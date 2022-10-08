@@ -5,7 +5,7 @@ import api from "../services/api";
 import { AuthContextProps } from "../types";
 
 import { ThemeProvider } from "styled-components";
-import {light,dark} from "../styles/theme";
+import { light, dark } from "../styles/theme";
 
 export const AuthContext = createContext<AuthContextProps>(
   {} as AuthContextProps
@@ -17,10 +17,10 @@ export const AuthProvider = ({ children }: any) => {
   const [logado, setLogado] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [mailLogin, setMailLogin] = useState("");
-  const [theme,setTheme] = useState(light);
+  const [theme, setTheme] = useState(light);
 
   const toggleTheme = () => {
-    setTheme(theme.title === 'light' ? dark : light);
+    setTheme(theme.title === "light" ? dark : light);
   };
 
   // o useEffect que vai ser disparado assim que o AuthProvider for construído na tela
@@ -102,12 +102,10 @@ export const AuthProvider = ({ children }: any) => {
         usuarioCreate,
         usuarioUpdate,
         mailLogin,
-        toggleTheme
+        toggleTheme,
       }}
     >
-      <ThemeProvider theme={theme}>
-        {children}
-      </ThemeProvider>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </AuthContext.Provider>
   );
 };

@@ -24,8 +24,7 @@
   "include": [
     "src"
   ],
-  /* arquivos carregados na compilação da aplicação */
   "files": [
-    "src/styles/theme.d.ts"
+    "src/styles/styled.d.ts"
   ]
 }

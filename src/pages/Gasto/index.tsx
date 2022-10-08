@@ -37,7 +37,6 @@ export default function Gasto() {
   };
 
   const edit = (obj: GastoProps) => {
-    console.log("clicous");
     setId(obj.id);
     setDescricao(obj.descricao);
     setValor(obj.valor + "");

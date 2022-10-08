@@ -4,7 +4,7 @@ type ButtonProps = {
     margin?: string;
 }   
 
-export const ButtonSld =  styled.button<ButtonProps>`
+export const ButtonSld = styled.button<ButtonProps>`
     padding: 10px 18px;
     margin: ${props => props.margin ? props.margin : "0px"};
 
